@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @PamelaZarnowski
-- 👀 I’m interested in be a Product owner
-- 🌱 I’m currently learning Agile methodologies
+- 👀 I’m interested in Azure Data Factory
+- 🌱 I’m currently a Senior Engenieer 
 - 💞️ I’m looking to collaborate on Projects
 - 📫 How to reach me Email < pamelaenrey@gmail.com >
 
