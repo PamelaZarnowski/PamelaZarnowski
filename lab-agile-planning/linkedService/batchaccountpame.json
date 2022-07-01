@@ -1,0 +1,22 @@
+{
+	"name": "batchaccountpame",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBatch",
+		"typeProperties": {
+			"batchUri": "https://batchaccountpame.westeurope.batch.azure.com",
+			"poolName": "pamepool",
+			"accountName": "batchaccountpame",
+			"linkedServiceName": {
+				"referenceName": "AzureBlobStorage1",
+				"type": "LinkedServiceReference"
+			},
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEMxMjFDMDZELTUxOUMtNEVDRC04M0NELTIyNUQ2MDcyQjI2Ql9hMGI1Y2Y1Mi1kY2NmLTQyMDItOGQzNi1hZjc1NjFkYjc2YTAiDQp9"
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntimeAzure",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
