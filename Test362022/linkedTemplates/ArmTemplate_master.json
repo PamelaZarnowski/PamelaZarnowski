@@ -19,6 +19,34 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
 		},
+		"AzureSqlDatabase2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase2'"
+		},
+		"batchaccountpame_accessKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessKey' of 'batchaccountpame'"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://keyvalutpampam.vault.azure.net/"
+		},
+		"CosmosDb1_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "AccountEndpoint=<EndpointUrl>;AccountKey=<AccessKey>;Database=<Database>)."
+		},
+		"batchaccountpame_properties_typeProperties_batchUri": {
+			"type": "string",
+			"defaultValue": "https://batchaccountpame.westeurope.batch.azure.com"
+		},
+		"batchaccountpame_properties_typeProperties_poolName": {
+			"type": "string",
+			"defaultValue": "pamepool"
+		},
+		"batchaccountpame_properties_typeProperties_accountName": {
+			"type": "string",
+			"defaultValue": "batchaccountpame"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -54,6 +82,27 @@
 					},
 					"AzureSqlDatabase1_connectionString": {
 						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
+					},
+					"AzureSqlDatabase2_connectionString": {
+						"value": "[parameters('AzureSqlDatabase2_connectionString')]"
+					},
+					"batchaccountpame_accessKey": {
+						"value": "[parameters('batchaccountpame_accessKey')]"
+					},
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"CosmosDb1_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('CosmosDb1_properties_typeProperties_connectionString_secretName')]"
+					},
+					"batchaccountpame_properties_typeProperties_batchUri": {
+						"value": "[parameters('batchaccountpame_properties_typeProperties_batchUri')]"
+					},
+					"batchaccountpame_properties_typeProperties_poolName": {
+						"value": "[parameters('batchaccountpame_properties_typeProperties_poolName')]"
+					},
+					"batchaccountpame_properties_typeProperties_accountName": {
+						"value": "[parameters('batchaccountpame_properties_typeProperties_accountName')]"
 					}
 				}
 			},
