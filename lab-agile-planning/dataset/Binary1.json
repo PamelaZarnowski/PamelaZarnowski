@@ -9,7 +9,9 @@
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation"
+				"type": "AzureBlobStorageLocation",
+				"fileName": "who is who.txt",
+				"container": "container"
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 {
-	"name": "pipeline2",
+	"name": "customactivityone",
 	"properties": {
 		"activities": [
 			{
@@ -16,6 +16,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"command": "powershell\"AddRowNum.ps1\"",
+					"resourceLinkedService": {
+						"referenceName": "AzureBlobStorage1",
+						"type": "LinkedServiceReference"
+					},
+					"folderPath": "container",
 					"referenceObjects": {
 						"linkedServices": [],
 						"datasets": []
@@ -46,6 +51,16 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "BinarySource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "BinaryReadSettings"
+						}
+					},
 					"sink": {
 						"type": "BinarySink",
 						"storeSettings": {
@@ -54,6 +69,12 @@
 					},
 					"enableStaging": false
 				},
+				"inputs": [
+					{
+						"referenceName": "Binary1",
+						"type": "DatasetReference"
+					}
+				],
 				"outputs": [
 					{
 						"referenceName": "Binary1",
