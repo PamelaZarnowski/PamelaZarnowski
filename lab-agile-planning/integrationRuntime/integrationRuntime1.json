@@ -11,7 +11,11 @@
 				"maxParallelExecutionsPerNode": 8,
 				"vNetProperties": {
 					"vNetId": "/subscriptions/1c0d4b18-516c-46d1-a911-69a5ed1dd65f/resourceGroups/PAm/providers/Microsoft.Network/virtualNetworks/vnet",
-					"subnet": "default"
+					"subnet": "default",
+					"publicIPs": [
+						"/subscriptions/1c0d4b18-516c-46d1-a911-69a5ed1dd65f/resourceGroups/PAm/providers/Microsoft.Network/publicIPAddresses/ippublicadress",
+						"/subscriptions/1c0d4b18-516c-46d1-a911-69a5ed1dd65f/resourceGroups/PAm/providers/Microsoft.Network/publicIPAddresses/ippublicadress2"
+					]
 				}
 			},
 			"ssisProperties": {
