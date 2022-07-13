@@ -15,7 +15,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"command": "powershell\"AddRowNum.ps1\"",
+					"command": {
+						"value": "{\n  \"type\": \"Table\",\n  \"name\": \"MYDATA\"\n}",
+						"type": "Expression"
+					},
 					"resourceLinkedService": {
 						"referenceName": "AzureBlobStorage1",
 						"type": "LinkedServiceReference"
