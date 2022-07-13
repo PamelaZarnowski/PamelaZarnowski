@@ -34,6 +34,15 @@
 		},
 		"batchaccountpame_properties_typeProperties_accountName": {
 			"value": "batchaccountpame"
+		},
+		"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"value": "pamesql.database.windows.net"
+		},
+		"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"value": "pamelazarnowski"
+		},
+		"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"value": ""
 		}
 	}
 }

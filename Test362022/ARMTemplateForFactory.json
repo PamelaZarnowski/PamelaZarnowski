@@ -46,6 +46,17 @@
 		"batchaccountpame_properties_typeProperties_accountName": {
 			"type": "string",
 			"defaultValue": "batchaccountpame"
+		},
+		"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"type": "string",
+			"defaultValue": "pamesql.database.windows.net"
+		},
+		"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"type": "string",
+			"defaultValue": "pamelazarnowski"
+		},
+		"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"type": "secureString"
 		}
 	},
 	"variables": {
@@ -71,7 +82,10 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"command": "powershell\"AddRowNum.ps1\"",
+							"command": {
+								"value": "{\n  \"type\": \"Table\",\n  \"name\": \"MYDATA\"\n}",
+								"type": "Expression"
+							},
 							"resourceLinkedService": {
 								"referenceName": "AzureBlobStorage1",
 								"type": "LinkedServiceReference"
@@ -428,6 +442,50 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntimeAzure')]",
+				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/integrationRuntime1')]",
+			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"type": "Managed",
+				"description": "tst",
+				"typeProperties": {
+					"computeProperties": {
+						"location": "West Europe",
+						"nodeSize": "Standard_D8_v3",
+						"numberOfNodes": 1,
+						"maxParallelExecutionsPerNode": 8
+					},
+					"ssisProperties": {
+						"catalogInfo": {
+							"catalogServerEndpoint": "[parameters('integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint')]",
+							"catalogAdminUserName": "[parameters('integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName')]",
+							"catalogAdminPassword": {
+								"type": "SecureString",
+								"value": "[parameters('integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword')]"
+							},
+							"catalogPricingTier": "S1"
+						},
+						"edition": "Standard",
+						"licenseType": "LicenseIncluded",
+						"dataProxyProperties": {
+							"connectVia": {
+								"type": "IntegrationRuntimeReference",
+								"referenceName": "integrationRuntimeSelfHosted"
+							},
+							"stagingLinkedService": {
+								"type": "LinkedServiceReference",
+								"referenceName": "AzureBlobStorage1"
+							}
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntimeSelfHosted')]",
 				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1')]"
 			]
 		},
