@@ -83,7 +83,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"command": {
-								"value": "$runId = Invoke-AzDataFactoryV2Pipeline -DataFactoryName $dataFactoryName -ResourceGroupName $resourceGroupName -PipelineName $pipelineName",
+								"value": "{\n  \"name\": \"MyCustomActivity\",\n  \"properties\": {\n    \"description\": \"Custom activity sample\",\n    \"activities\": [{\n      \"type\": \"Custom\",\n      \"name\": \"MyCustomActivity\",\n      \"linkedServiceName\": {\n        \"referenceName\": \"AzureBatchLinkedService\",\n        \"type\": \"LinkedServiceReference\"\n      },\n      \"typeProperties\": {\n        \"command\": \"cmd /c echo hello world\"\n      }\n    }]\n  }\n}",
 								"type": "Expression"
 							},
 							"resourceLinkedService": {
