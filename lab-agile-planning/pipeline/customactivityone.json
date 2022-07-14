@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"command": {
-						"value": "{\n  \"type\": \"Table\",\n  \"name\": \"MYDATA\"\n}",
+						"value": "$runId = Invoke-AzDataFactoryV2Pipeline -DataFactoryName $dataFactoryName -ResourceGroupName $resourceGroupName -PipelineName $pipelineName",
 						"type": "Expression"
 					},
 					"resourceLinkedService": {
