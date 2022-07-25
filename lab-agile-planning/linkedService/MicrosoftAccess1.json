@@ -1,0 +1,21 @@
+{
+	"name": "MicrosoftAccess1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "MicrosoftAccess",
+		"typeProperties": {
+			"connectionString": {
+				"type": "SecureString",
+				"value": "**********"
+			},
+			"authenticationType": "Basic",
+			"userName": "pamelazarnowski",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJiM2M3NmY3Ni1lMmE1LTRhMjYtOGMyNi0yZWI1MjFiNmI5YmUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntimeSelfHosted",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
