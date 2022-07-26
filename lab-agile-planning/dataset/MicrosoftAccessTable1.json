@@ -1,0 +1,15 @@
+{
+	"name": "MicrosoftAccessTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "MicrosoftAccess2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "MicrosoftAccessTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "`final`"
+		}
+	}
+}
