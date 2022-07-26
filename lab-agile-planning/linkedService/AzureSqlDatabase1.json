@@ -5,8 +5,8 @@
 		"annotations": [],
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
-			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=pameserver.database.windows.net;initial catalog=Databasesamplepame;user id=pamelazarnowski",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmYjY2ODY2My03NTE3LTQxNmUtOTAyZS0zYjY1NzAyZjk4NGEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=pamesql.database.windows.net;initial catalog=master;user id=pamelazarnowski",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4ZmMwNjliOC1iMTYxLTRlMmUtODZhNy05MGRiYmNjYzU2ODUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "integrationRuntimeSelfHosted",
