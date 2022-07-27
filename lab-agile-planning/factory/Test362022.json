@@ -5,6 +5,10 @@
 			"ramenparameter": {
 				"type": "string",
 				"value": "vnet"
+			},
+			"ramen": {
+				"type": "float",
+				"value": 45
 			}
 		}
 	},
