@@ -1,5 +1,13 @@
 {
 	"name": "Test362022",
+	"properties": {
+		"globalParameters": {
+			"ramenparameter": {
+				"type": "string",
+				"value": "vnet"
+			}
+		}
+	},
 	"location": "westeurope",
 	"identity": {
 		"type": "SystemAssigned",
