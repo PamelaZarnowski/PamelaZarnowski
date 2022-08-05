@@ -1,0 +1,15 @@
+{
+	"name": "Web1",
+	"properties": {
+		"annotations": [],
+		"type": "Web",
+		"typeProperties": {
+			"url": "https://www.xe.com/currency/",
+			"authenticationType": "Anonymous"
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntimeSelfHosted",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
