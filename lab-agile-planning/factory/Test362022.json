@@ -1,17 +1,5 @@
 {
 	"name": "Test362022",
-	"properties": {
-		"globalParameters": {
-			"ramenparameter": {
-				"type": "string",
-				"value": "nep"
-			},
-			"ramen": {
-				"type": "float",
-				"value": 45
-			}
-		}
-	},
 	"location": "westeurope",
 	"identity": {
 		"type": "SystemAssigned",
