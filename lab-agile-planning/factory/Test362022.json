@@ -1,5 +1,13 @@
 {
 	"name": "Test362022",
+	"properties": {
+		"globalParameters": {
+			"pam": {
+				"type": "string",
+				"value": "dev"
+			}
+		}
+	},
 	"location": "westeurope",
 	"identity": {
 		"type": "SystemAssigned",
