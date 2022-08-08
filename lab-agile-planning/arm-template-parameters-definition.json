@@ -158,7 +158,7 @@
             "fqdns": "="
         }
     },
-    "Microsoft.DataFactory/factories": {
+    "Microsoft.DataFactory/factories/globalparameters": {
         "properties": {
             "*": {
                 "value": "="
