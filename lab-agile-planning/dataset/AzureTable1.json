@@ -1,15 +1,15 @@
 {
-	"name": "WebTable1",
+	"name": "AzureTable1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "Web1",
+			"referenceName": "AzureTableStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "WebTable",
+		"type": "AzureTable",
 		"schema": [],
 		"typeProperties": {
-			"index": 0
+			"tableName": "currencytable"
 		}
 	}
 }
