@@ -16,12 +16,13 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "WebSource"
+						"type": "AzureSqlSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
 					},
 					"sink": {
-						"type": "AzureTableSink",
-						"azureTableInsertType": "replace",
-						"writeBatchSize": 10000
+						"type": "MicrosoftAccessSink",
+						"preCopyScript": "DELETE*FROM TABLE"
 					},
 					"enableStaging": false,
 					"translator": {
@@ -35,13 +36,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "WebTable1",
+						"referenceName": "AzureSqlTable1",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureTable1",
+						"referenceName": "MicrosoftAccessTable1",
 						"type": "DatasetReference"
 					}
 				]
