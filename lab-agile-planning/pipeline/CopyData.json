@@ -22,7 +22,7 @@
 					},
 					"sink": {
 						"type": "MicrosoftAccessSink",
-						"preCopyScript": "DELETE*FROM TABLE"
+						"preCopyScript": "DELETE*FROM table"
 					},
 					"enableStaging": false,
 					"translator": {
