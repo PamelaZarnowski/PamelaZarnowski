@@ -9,7 +9,7 @@
 		"type": "MicrosoftAccessTable",
 		"schema": [],
 		"typeProperties": {
-			"tableName": "`final`"
+			"tableName": "`Table1`"
 		}
 	}
 }
