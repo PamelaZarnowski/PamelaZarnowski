@@ -10,6 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "endfile",
+				"folderPath": "capetaoutputs",
 				"container": "output"
 			},
 			"columnDelimiter": ",",
