@@ -45,7 +45,7 @@
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
 				"     partitionBy('roundRobin', 2)) ~> Movies",
-				"Movies derive(Year = ERROR_FUNCTION('')) ~> year",
+				"Movies derive(Year = te) ~> year",
 				"year sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     skipDuplicateMapInputs: true,",
