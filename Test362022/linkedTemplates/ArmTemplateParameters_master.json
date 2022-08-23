@@ -17,14 +17,35 @@
 		"AzureSqlDatabase2_connectionString": {
 			"value": ""
 		},
+		"AzureTableStorage1_connectionString": {
+			"value": ""
+		},
+		"MicrosoftAccess1_connectionString": {
+			"value": ""
+		},
+		"MicrosoftAccess1_credential": {
+			"value": ""
+		},
+		"MicrosoftAccess2_connectionString": {
+			"value": ""
+		},
+		"MicrosoftAccess2_credential": {
+			"value": ""
+		},
 		"batchaccountpame_accessKey": {
 			"value": ""
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://keyvalutpampam.vault.azure.net/"
 		},
+		"AzureKeyVault2_properties_typeProperties_baseUrl": {
+			"value": "https://keyvalutpampam.vault.azure.net/"
+		},
 		"CosmosDb1_properties_typeProperties_connectionString_secretName": {
 			"value": "AccountEndpoint=<EndpointUrl>;AccountKey=<AccessKey>;Database=<Database>)."
+		},
+		"Web1_properties_typeProperties_url": {
+			"value": "https://www.xe.com/currencytables/"
 		},
 		"batchaccountpame_properties_typeProperties_batchUri": {
 			"value": "https://batchaccountpame.westeurope.batch.azure.com"
@@ -43,6 +64,9 @@
 		},
 		"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
 			"value": ""
+		},
+		"default_properties_pam_value": {
+			"value": "dev"
 		},
 		"containerUri": {
 			"value": ""

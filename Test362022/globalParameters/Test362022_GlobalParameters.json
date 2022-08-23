@@ -1,1 +1,6 @@
-{}
+{
+	"pam": {
+		"type": "string",
+		"value": "dev"
+	}
+}
