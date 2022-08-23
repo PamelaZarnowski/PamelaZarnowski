@@ -45,7 +45,7 @@
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
 				"     partitionBy('roundRobin', 2)) ~> Movies",
-				"Movies derive(year = ERROR_FUNCTION('{Worldwide Gross}Film')) ~> year",
+				"Movies derive(year = acos(Genre)) ~> year",
 				"year sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     skipDuplicateMapInputs: true,",
