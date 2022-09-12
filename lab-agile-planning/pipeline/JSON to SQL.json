@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "JSON to SQL",
 	"properties": {
 		"activities": [
 			{
@@ -28,20 +28,49 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
-						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"writeBehavior": "upsert",
+						"upsertSettings": {
+							"useTempDB": true
+						},
+						"sqlWriterUseTableLock": false,
+						"disableMetricsCollection": false
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['id']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['name']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['age']"
+								}
+							},
+							{
+								"source": {
+									"path": "$['gender']"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
-						"referenceName": "Json1",
+						"referenceName": "Json3",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSqlTable3",
+						"referenceName": "AzureSqlTable4",
 						"type": "DatasetReference"
 					}
 				]

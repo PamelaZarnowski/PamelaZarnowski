@@ -1,0 +1,29 @@
+{
+	"name": "AzureSqlTable4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "fruit",
+				"type": "varchar"
+			},
+			{
+				"name": "size",
+				"type": "varchar"
+			},
+			{
+				"name": "color",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Mytable"
+		}
+	}
+}
