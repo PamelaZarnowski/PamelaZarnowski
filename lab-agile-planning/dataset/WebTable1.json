@@ -1,10 +1,6 @@
 {
 	"name": "WebTable1",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "Web1",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "WebTable",
 		"schema": [],
