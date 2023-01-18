@@ -1,0 +1,7 @@
+{
+	"name": "CosmosDbPEtest",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/1c0d4b18-516c-46d1-a911-69a5ed1dd65f/resourceGroups/PAm/providers/Microsoft.DocumentDb/databaseAccounts/cosmosdbpe",
+		"groupId": "Sql"
+	}
+}
