@@ -4,7 +4,7 @@
 		"globalParameters": {
 			"pam": {
 				"type": "string",
-				"value": "dev"
+				"value": "dev9"
 			}
 		}
 	},
