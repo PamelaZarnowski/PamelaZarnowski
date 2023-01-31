@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
 		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
 		"AzureSqlDatabase1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
@@ -27,14 +31,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureTableStorage1'"
 		},
-		"MicrosoftAccess1_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'MicrosoftAccess1'"
-		},
-		"MicrosoftAccess1_credential": {
-			"type": "secureString",
-			"metadata": "Secure string for 'credential' of 'MicrosoftAccess1'"
-		},
 		"MicrosoftAccess2_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'MicrosoftAccess2'"
@@ -43,9 +39,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'credential' of 'MicrosoftAccess2'"
 		},
-		"batchaccountpame_accessKey": {
+		"SharePointRepoPam_servicePrincipalKey": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accessKey' of 'batchaccountpame'"
+			"metadata": "Secure string for 'servicePrincipalKey' of 'SharePointRepoPam'"
+		},
+		"cosmosdbpetestlinkedservice_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'cosmosdbpetestlinkedservice'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagelakeaccounts.dfs.core.windows.net/"
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"type": "string",
@@ -55,25 +59,17 @@
 			"type": "string",
 			"defaultValue": "https://keyvalutpampam.vault.azure.net/"
 		},
-		"CosmosDb1_properties_typeProperties_connectionString_secretName": {
+		"AzureKeyVault3_properties_typeProperties_baseUrl": {
 			"type": "string",
-			"defaultValue": "AccountEndpoint=<EndpointUrl>;AccountKey=<AccessKey>;Database=<Database>)."
+			"defaultValue": "https://keyvalutpampam.vault.azure.net/"
 		},
-		"Web1_properties_typeProperties_url": {
+		"SharePointRepoPam_properties_typeProperties_servicePrincipalId": {
 			"type": "string",
-			"defaultValue": "https://www.xe.com/currencytables/"
+			"defaultValue": "3dacff7c-0c10-4503-b03d-a06b3e550852"
 		},
-		"batchaccountpame_properties_typeProperties_batchUri": {
+		"SharepointOnlineHTTP_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "https://batchaccountpame.westeurope.batch.azure.com"
-		},
-		"batchaccountpame_properties_typeProperties_poolName": {
-			"type": "string",
-			"defaultValue": "pamepool"
-		},
-		"batchaccountpame_properties_typeProperties_accountName": {
-			"type": "string",
-			"defaultValue": "batchaccountpame"
+			"defaultValue": "https://microsofteur.sharepoint.com"
 		},
 		"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
 			"type": "string",
@@ -85,6 +81,22 @@
 		},
 		"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
 			"type": "secureString"
+		},
+		"CosmosDbPEtest_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/1c0d4b18-516c-46d1-a911-69a5ed1dd65f/resourceGroups/PAm/providers/Microsoft.DocumentDb/databaseAccounts/cosmosdbpe"
+		},
+		"CosmosDbPEtest_properties_groupId": {
+			"type": "string",
+			"defaultValue": "Sql"
+		},
+		"privateendpointforSQL_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/1c0d4b18-516c-46d1-a911-69a5ed1dd65f/resourceGroups/PAm/providers/Microsoft.Sql/servers/pamesql"
+		},
+		"privateendpointforSQL_properties_groupId": {
+			"type": "string",
+			"defaultValue": "sqlServer"
 		},
 		"default_properties_pam_value": {
 			"type": "string",
@@ -120,23 +132,23 @@
 					"AzureTableStorage1_connectionString": {
 						"value": "[parameters('AzureTableStorage1_connectionString')]"
 					},
+					"SharePointRepoPam_servicePrincipalKey": {
+						"value": "[parameters('SharePointRepoPam_servicePrincipalKey')]"
+					},
 					"AzureBlobStorage1_connectionString": {
 						"value": "[parameters('AzureBlobStorage1_connectionString')]"
 					},
 					"AzureBlobStorage2_connectionString": {
 						"value": "[parameters('AzureBlobStorage2_connectionString')]"
 					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
 					"AzureSqlDatabase1_connectionString": {
 						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
 					},
 					"AzureSqlDatabase2_connectionString": {
 						"value": "[parameters('AzureSqlDatabase2_connectionString')]"
-					},
-					"MicrosoftAccess1_connectionString": {
-						"value": "[parameters('MicrosoftAccess1_connectionString')]"
-					},
-					"MicrosoftAccess1_credential": {
-						"value": "[parameters('MicrosoftAccess1_credential')]"
 					},
 					"MicrosoftAccess2_connectionString": {
 						"value": "[parameters('MicrosoftAccess2_connectionString')]"
@@ -153,11 +165,29 @@
 					"AzureKeyVault2_properties_typeProperties_baseUrl": {
 						"value": "[parameters('AzureKeyVault2_properties_typeProperties_baseUrl')]"
 					},
-					"CosmosDb1_properties_typeProperties_connectionString_secretName": {
-						"value": "[parameters('CosmosDb1_properties_typeProperties_connectionString_secretName')]"
+					"AzureKeyVault3_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault3_properties_typeProperties_baseUrl')]"
 					},
-					"Web1_properties_typeProperties_url": {
-						"value": "[parameters('Web1_properties_typeProperties_url')]"
+					"SharePointRepoPam_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('SharePointRepoPam_properties_typeProperties_servicePrincipalId')]"
+					},
+					"SharepointOnlineHTTP_properties_typeProperties_url": {
+						"value": "[parameters('SharepointOnlineHTTP_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"CosmosDbPEtest_properties_privateLinkResourceId": {
+						"value": "[parameters('CosmosDbPEtest_properties_privateLinkResourceId')]"
+					},
+					"CosmosDbPEtest_properties_groupId": {
+						"value": "[parameters('CosmosDbPEtest_properties_groupId')]"
+					},
+					"privateendpointforSQL_properties_privateLinkResourceId": {
+						"value": "[parameters('privateendpointforSQL_properties_privateLinkResourceId')]"
+					},
+					"privateendpointforSQL_properties_groupId": {
+						"value": "[parameters('privateendpointforSQL_properties_groupId')]"
 					}
 				}
 			},
@@ -177,17 +207,8 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"batchaccountpame_accessKey": {
-						"value": "[parameters('batchaccountpame_accessKey')]"
-					},
-					"batchaccountpame_properties_typeProperties_batchUri": {
-						"value": "[parameters('batchaccountpame_properties_typeProperties_batchUri')]"
-					},
-					"batchaccountpame_properties_typeProperties_poolName": {
-						"value": "[parameters('batchaccountpame_properties_typeProperties_poolName')]"
-					},
-					"batchaccountpame_properties_typeProperties_accountName": {
-						"value": "[parameters('batchaccountpame_properties_typeProperties_accountName')]"
+					"cosmosdbpetestlinkedservice_connectionString": {
+						"value": "[parameters('cosmosdbpetestlinkedservice_connectionString')]"
 					},
 					"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
 						"value": "[parameters('integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint')]"
@@ -202,6 +223,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'Test362022_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "Test362022_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'Test362022_ArmTemplate_1')]"
 			]
 		}
 	]

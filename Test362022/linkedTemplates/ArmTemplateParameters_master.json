@@ -11,6 +11,9 @@
 		"AzureBlobStorage2_connectionString": {
 			"value": ""
 		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_connectionString": {
 			"value": ""
 		},
@@ -20,20 +23,20 @@
 		"AzureTableStorage1_connectionString": {
 			"value": ""
 		},
-		"MicrosoftAccess1_connectionString": {
-			"value": ""
-		},
-		"MicrosoftAccess1_credential": {
-			"value": ""
-		},
 		"MicrosoftAccess2_connectionString": {
 			"value": ""
 		},
 		"MicrosoftAccess2_credential": {
 			"value": ""
 		},
-		"batchaccountpame_accessKey": {
+		"SharePointRepoPam_servicePrincipalKey": {
 			"value": ""
+		},
+		"cosmosdbpetestlinkedservice_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://storagelakeaccounts.dfs.core.windows.net/"
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://keyvalutpampam.vault.azure.net/"
@@ -41,20 +44,14 @@
 		"AzureKeyVault2_properties_typeProperties_baseUrl": {
 			"value": "https://keyvalutpampam.vault.azure.net/"
 		},
-		"CosmosDb1_properties_typeProperties_connectionString_secretName": {
-			"value": "AccountEndpoint=<EndpointUrl>;AccountKey=<AccessKey>;Database=<Database>)."
+		"AzureKeyVault3_properties_typeProperties_baseUrl": {
+			"value": "https://keyvalutpampam.vault.azure.net/"
 		},
-		"Web1_properties_typeProperties_url": {
-			"value": "https://www.xe.com/currencytables/"
+		"SharePointRepoPam_properties_typeProperties_servicePrincipalId": {
+			"value": "3dacff7c-0c10-4503-b03d-a06b3e550852"
 		},
-		"batchaccountpame_properties_typeProperties_batchUri": {
-			"value": "https://batchaccountpame.westeurope.batch.azure.com"
-		},
-		"batchaccountpame_properties_typeProperties_poolName": {
-			"value": "pamepool"
-		},
-		"batchaccountpame_properties_typeProperties_accountName": {
-			"value": "batchaccountpame"
+		"SharepointOnlineHTTP_properties_typeProperties_url": {
+			"value": "https://microsofteur.sharepoint.com"
 		},
 		"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
 			"value": "pamesql.database.windows.net"
@@ -64,6 +61,18 @@
 		},
 		"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
 			"value": ""
+		},
+		"CosmosDbPEtest_properties_privateLinkResourceId": {
+			"value": "/subscriptions/1c0d4b18-516c-46d1-a911-69a5ed1dd65f/resourceGroups/PAm/providers/Microsoft.DocumentDb/databaseAccounts/cosmosdbpe"
+		},
+		"CosmosDbPEtest_properties_groupId": {
+			"value": "Sql"
+		},
+		"privateendpointforSQL_properties_privateLinkResourceId": {
+			"value": "/subscriptions/1c0d4b18-516c-46d1-a911-69a5ed1dd65f/resourceGroups/PAm/providers/Microsoft.Sql/servers/pamesql"
+		},
+		"privateendpointforSQL_properties_groupId": {
+			"value": "sqlServer"
 		},
 		"default_properties_pam_value": {
 			"value": "dev"
